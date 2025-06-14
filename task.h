@@ -2,7 +2,7 @@
 #define TASK_H
 
 typedef struct {
-    char id;
+    int id;
     char name[100];
     int is_done;
 } Task;
