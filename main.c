@@ -22,15 +22,22 @@ int main() {
 				save_tasks(tasks, count);
 				break;
 			case 2:
-				printf("\nSil\n\n");
+				printf("Silinecek Gorev id girin: ");
+				scanf("%d", &id);
+				count = delete_task(tasks, count, id);
+				save_tasks(tasks, count);
 				break;
 			case 3:
 				list_tasks(tasks, count);
 				break;
 			case 4:
-				printf("\nTamamla\n\n");
+				printf("Tamamlanacak Gorev id girin: ");
+				scanf("%d", &id);
+				 complete_taks(tasks, count, id);
+				save_tasks(tasks, count);
 				break;
 			default:
+				printf("\n\nGecersiz komut\n");
 				break;
 		} 
 	} while (choise != 5);
